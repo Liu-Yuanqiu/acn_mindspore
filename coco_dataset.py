@@ -17,10 +17,10 @@ class CocoDataset:
     ):
         self.max_feat_num = max_feat_num
         self.seq_per_img = seq_per_img
-        self.image_ids = utils.load_lines(image_ids_path) #读取文件中每一行的图片id
-        self.att_feats_folder = att_feats_folder if len(att_feats_folder) > 0 else None  #特征文件储存文件夹
+        self.image_ids = utils.load_lines(image_ids_path)
+        self.att_feats_folder = att_feats_folder if len(att_feats_folder) > 0 else None
 
-        if input_seq is not None and target_seq is not None: #input_seq target_seq是啥
+        if input_seq is not None and target_seq is not None:
             self.input_seq = pickle.load(open(input_seq, 'rb'), encoding='bytes')
             self.target_seq = pickle.load(open(target_seq, 'rb'), encoding='bytes')
             self.seq_len = len(self.input_seq[self.image_ids[0]][0,:])
