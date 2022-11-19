@@ -180,7 +180,7 @@ class LowRankLayer(nn.Cell):
         super(LowRankLayer, self).__init__()
         self.embed_dim = embed_dim
         self.num_heads = att_heads
-        self.head_dim = embed_dim // self.num_heads      #除数向下取整
+        self.head_dim = embed_dim // self.num_heads
         self.scaling = self.head_dim ** -0.5
         self.output_dim = embed_dim
         self.in_proj_q = nn.SequentialCell([
