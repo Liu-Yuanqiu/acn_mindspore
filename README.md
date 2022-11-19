@@ -1,5 +1,13 @@
 # 基于胶囊网络的图像描述生成算法
 
+## 硬件
+ModelArts平台，硬件配置为`1*Ascend 910 CPU24核 内存96GiB`。
+## 环境
+- MindSpore 1.7
+- numpy
+- argparse
+- pickle
+- json
 ## 数据集
 使用的数据集：MS COCO
 使用Faster RCNN提取的图片特征进行训练，数据集获取直接执行`data.ipynb`即可。
